@@ -41,6 +41,10 @@
         <span class="text-red-300">SF Policies w/ Sharing Gaps:</span>
         <strong id="m-gaps" class="text-red-400 ml-1 font-mono">--</strong>
       </div>
+      <div class="px-3 py-1.5 rounded-lg bg-red-950/40 border border-red-900/60">
+        <span class="text-red-300">SF Policies w/ No Access Audit:</span>
+        <strong id="m-audit" class="text-red-400 ml-1 font-mono">--</strong>
+      </div>
     </div>
   </header>
 
@@ -187,6 +191,7 @@
       document.getElementById('m-total').textContent = `${appData.metrics.bay_area_total_records} (9 Bay Counties)`;
       document.getElementById('m-recent').textContent = `${appData.metrics.bay_area_recent_source_pct}% (${appData.metrics.bay_area_recent_source_count})`;
       document.getElementById('m-gaps').textContent = `${appData.metrics.sf_policies_with_sharing_gaps} / ${appData.metrics.sf_policies_count}`;
+      document.getElementById('m-audit').textContent = `${appData.metrics.sf_policies_with_audit_gaps} / ${appData.metrics.sf_policies_count}`;
 
       initMap();
       renderRoute();

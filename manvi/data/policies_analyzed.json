@@ -13,14 +13,15 @@
       "City Attorney"
     ],
     "outside_agency_access": "Permitted for law enforcement / authorized requests; downstream limits vary.",
-    "audit_cadence": "Unspecified / Periodic",
+    "audit_cadence": "No access audit stated",
     "vague_or_blank_fields": [
-      "outside_agency_access"
+      "outside_agency_access",
+      "audit_cadence"
     ],
     "verbatim_quotes": {
       "retention": "es Data Retention The Department's data retention period and justification are as follows: Data is active for 18 months in the production server, then 4.5 years in cloud storage. Airport server storage size limits retention on production server. Airport Data Retention Policy requires 4.5 years. Data would only be retained longer th",
       "sharing": "suspects, and others associated with a law enforcement investigation. Prohibited use cases include any uses not stated in the Authorized Use Case section. Department may use information collected from technology only for legally authorized purposes,",
-      "audit": "the Department to ensure transparency, oversight, and accountability measures. Department use of surveillance technology and information collected, retained, processed or shared by surveillance technology must be consistent with this Policy; must comply with"
+      "audit": "Not explicitly specified in extracted text."
     },
     "lineage_edges": [
       {
@@ -48,55 +49,6 @@
     "plain_english_summary": "San Francisco International Airport uses Airport Curbside & Garage ALPR to log vehicle plates and timestamps. While retention is stated as '18 months', external sharing rules leave room for broad inter-agency requests."
   },
   {
-    "id": "biannual_inventory_2026-09",
-    "short_name": "biannual_inventory_2026-09.txt",
-    "agency": "biannual_inventory_2026-09.txt",
-    "technology": "Surveillance Tech",
-    "filename": "biannual_inventory_2026-09.txt",
-    "purpose": "Automated Surveillance Tech deployment for biannual_inventory_2026-09.txt operations and investigations.",
-    "data_collected": "License plate characters, vehicle images, timestamps, and GPS/camera IDs.",
-    "retention_period": "Unspecified / Conditional",
-    "sharing_partners": [
-      "Authorized City Agencies",
-      "Vendor Cloud Storage"
-    ],
-    "outside_agency_access": "Vague / Unspecified",
-    "audit_cadence": "Annual COIT / Department Review",
-    "vague_or_blank_fields": [
-      "retention_period",
-      "outside_agency_access"
-    ],
-    "verbatim_quotes": {
-      "retention": "Not explicitly specified in extracted text.",
-      "sharing": "Not explicitly specified in extracted text.",
-      "audit": "to buy or are using, and to publish a biannual report on the inventory's status. The Biannual Surveillance Technology Inventory Report includes the name of each technology in the inventory, a general technology category description, information about if the"
-    },
-    "lineage_edges": [
-      {
-        "from": "biannual_inventory_2026-09.txt Surveillance Tech",
-        "to": "Vendor / Agency Storage",
-        "tier": 1,
-        "is_gap": false,
-        "reason": "Retention: Unspecified / Conditional"
-      },
-      {
-        "from": "Vendor / Agency Storage",
-        "to": "Authorized City Agencies",
-        "tier": 2,
-        "is_gap": false,
-        "reason": "Primary authorized access"
-      },
-      {
-        "from": "Authorized City Agencies",
-        "to": "External / Regional Hubs",
-        "tier": 3,
-        "is_gap": true,
-        "reason": "Broad or vague downstream sharing language"
-      }
-    ],
-    "plain_english_summary": "biannual_inventory_2026-09.txt uses Surveillance Tech to log vehicle plates and timestamps. While retention is stated as 'Unspecified / Conditional', external sharing rules leave room for broad inter-agency requests."
-  },
-  {
     "id": "pw_alpr_stp",
     "short_name": "Public Works",
     "agency": "SF Department of Public Works",
@@ -111,14 +63,15 @@
       "City Attorney"
     ],
     "outside_agency_access": "Vague / Unspecified",
-    "audit_cadence": "Unspecified / Periodic",
+    "audit_cadence": "No access audit stated",
     "vague_or_blank_fields": [
-      "outside_agency_access"
+      "outside_agency_access",
+      "audit_cadence"
     ],
     "verbatim_quotes": {
       "retention": "ose. Please list data retention schedules (i.e., x type of data will be retained for 1 year) based on the following categories: \u2022 Permanent records (i.e., records that are essential):",
       "sharing": "; must comply with all City, State, and Federal laws and regulations; and must protect all state and federal Constitutional guarantees. Specifications: The software and/or firmware used to operate the surveillance technology must be kept up to date and maintained. Safety: Sur",
-      "audit": "the Department to ensure transparency, oversight, and accountability measures. Department use of surveillance technology and information collected, retained, processed or shared by surveillance technology must be consistent with this Policy; must comply with"
+      "audit": "Not explicitly specified in extracted text."
     },
     "lineage_edges": [
       {
@@ -160,14 +113,15 @@
       "City Attorney"
     ],
     "outside_agency_access": "Permitted for law enforcement / authorized requests; downstream limits vary.",
-    "audit_cadence": "Unspecified / Periodic",
+    "audit_cadence": "No access audit stated",
     "vague_or_blank_fields": [
-      "outside_agency_access"
+      "outside_agency_access",
+      "audit_cadence"
     ],
     "verbatim_quotes": {
       "retention": "w PII data only as long as necessary to Retention: accomplish a lawful and authorized purpose. The Department\u2019s data retention period and justification are as follows: \u2022 ALPR video files will be retained for 30-60 days (dependi",
       "sharing": "Coordination with law enforcement or first responders for all approved requests. Approved requests include criminal activities X Criminal Justice such as auto burglaries, personal theft, assaults, robberies,",
-      "audit": "the Department to ensure transparency, oversight, and accountability measures. Department use of surveillance technology and information collected, retained, processed or shared by surveillance technology must be consistent with this Policy; must comply with"
+      "audit": "Not explicitly specified in extracted text."
     },
     "lineage_edges": [
       {
@@ -209,14 +163,14 @@
       "City Attorney"
     ],
     "outside_agency_access": "Vague / Unspecified",
-    "audit_cadence": "Unspecified / Periodic",
+    "audit_cadence": "Access logged and auditable",
     "vague_or_blank_fields": [
       "retention_period"
     ],
     "verbatim_quotes": {
       "retention": "Upon completion of the applicable data retention period, the Department will automatically dispose of raw ALPR data (e.g., ALPR data that has not been anonymized or aggregated). Training: To reduce the risk that ALPR technology or ALPR data will be used in",
       "sharing": "collection, retention, processing, and sharing of ALPR data must comply with this Policy and with all applicable City, State, and Federal laws. Specifications: The software and/or firmware used to operate the ALPR technology must be up to date and maintained. Safety: ALPR technology must be",
-      "audit": "and safeguards to ensure transparency, oversight, and accountability in its use of ALPR technology and ALPR data. The Department\u2019s use of ALPR technology, including its collection, retention, processing, and sharing of ALPR data must comply with this Policy and with all applicable City, State"
+      "audit": "tations. \u2022 All access to and activity in the ALPR system is logged and can be audited. Data Sharing: The Department will endeavor to ensure that other agencies or departments with which it shares ALPR data receive a copy of and comply with this Poli"
     },
     "lineage_edges": [
       {
@@ -259,14 +213,15 @@
       "City Attorney"
     ],
     "outside_agency_access": "Permitted for law enforcement / authorized requests; downstream limits vary.",
-    "audit_cadence": "Unspecified / Periodic",
+    "audit_cadence": "No access audit stated",
     "vague_or_blank_fields": [
-      "outside_agency_access"
+      "outside_agency_access",
+      "audit_cadence"
     ],
     "verbatim_quotes": {
       "retention": "se. Please list data retention schedules (i.e., x type of data will be retained for 1 year) based on the following categories: \u2022 Permanent records (i.e., records that are essential): s",
       "sharing": "passion, performance with integrity and law enforcement with vision. The Surveillance Technology Policy (\u201cPolicy\u201d) defines the manner in which the ALPR will be used to support this mission, by describing the intended purpose, authorized and restric",
-      "audit": "the Department to ensure transparency, oversight, and accountability measures. Department use of surveillance technology and information collected, retained, processed or shared by surveillance technology must be consistent with this Policy; must comply with"
+      "audit": "Not explicitly specified in extracted text."
     },
     "lineage_edges": [
       {
@@ -309,15 +264,16 @@
       "City Attorney"
     ],
     "outside_agency_access": "Permitted for law enforcement / authorized requests; downstream limits vary.",
-    "audit_cadence": "Unspecified / Periodic",
+    "audit_cadence": "No access audit stated",
     "vague_or_blank_fields": [
       "retention_period",
-      "outside_agency_access"
+      "outside_agency_access",
+      "audit_cadence"
     ],
     "verbatim_quotes": {
       "retention": "w PII data only as long as necessary to Retention: accomplish a lawful and authorized purpose. The Department\u2019s data retention period and justification are as follows: SFPD defers to the NCRIC retention standard: ALPR records are maintained for",
       "sharing": "passion, performance with integrity and law enforcement with vision. The Surveillance Technology Policy (\u201cPolicy\u201d) defines the manner in which the ALPR will be used to support this mission, by describing the intended purpose, authorized and restri",
-      "audit": "the Department to ensure transparency, oversight, and accountability measures. Department use of surveillance technology and information collected, retained, processed or shared by surveillance technology must be consistent with this Policy; must comply with"
+      "audit": "Not explicitly specified in extracted text."
     },
     "lineage_edges": [
       {

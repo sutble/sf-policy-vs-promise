@@ -12,7 +12,10 @@ import urllib.error
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA_DIR = os.path.join(ROOT, "data")
+DATA_DIR = os.path.join(ROOT, "data")  # outputs
+# Inputs live in the repo-level data/ folder (fall back to manvi/data if run standalone).
+_REPO_DATA = os.path.join(os.path.dirname(ROOT), "data")
+INPUT_DIR = _REPO_DATA if os.path.isdir(os.path.join(_REPO_DATA, "sf-surveillance-inventory")) else DATA_DIR
 
 CITY_COORDS = {
     "San Francisco": [37.7749, -122.4194],
@@ -73,7 +76,7 @@ POLICY_META = {
 
 
 def process_atlas():
-    csv_path = os.path.join(DATA_DIR, "bay_area_atlas_of_surveillance.csv")
+    csv_path = os.path.join(INPUT_DIR, "bay_area_atlas_of_surveillance.csv")
     rows = []
     tech_counts = {}
     recent_count = 0
@@ -203,7 +206,10 @@ def heuristic_extract(short_name, agency, tech, text):
 
     ret_q = find_quote([r"retent(?:ion|ained)[^.]{0,120}\.", r"\b\d+\s*(?:days?|months?|years?)\b[^.]{0,100}\."])
     shr_q = find_quote([r"(?:outside|third[- ]party|external|share|sharing|NCRIC|federal|law enforcement)[^.]{0,160}\."])
-    aud_q = find_quote([r"(?:audit|annual report|compliance|review|oversight)[^.]{0,140}\."])
+    # Only count real access logging / audit language. Generic words like "review" or "oversight"
+    # appear in every city policy template, which made every policy look audited (0 audit gaps).
+    aud_q = find_quote([r"access to[^.]{0,80}(?:logged|audited)[^.]{0,80}\.",
+                        r"\baudit(?:ed|s|ing)?\b[^.]{0,80}\baccess\b[^.]{0,80}\."])
 
     ret_match = re.search(r"\b(\d+\s*(?:days?|months?|years?))\b", ret_q, re.IGNORECASE)
     retention = ret_match.group(1) if ret_match else "Unspecified / Conditional"
@@ -213,10 +219,11 @@ def heuristic_extract(short_name, agency, tech, text):
         vague.append("retention_period")
     if any(w in shr_q.lower() for w in ["as permitted by law", "case-by-case", "authorized", "ncric"]) or "not explicitly" in shr_q.lower():
         vague.append("outside_agency_access")
-    if "not explicitly" in aud_q.lower() or "periodic" in aud_q.lower() or "as needed" in aud_q.lower():
-        vague.append("audit_cadence")
     if not vague:
         vague.append("outside_agency_access")
+    # Checked after the sharing default above so the sharing-gap count is unchanged by the audit fix.
+    if "not explicitly" in aud_q.lower():
+        vague.append("audit_cadence")
 
     partners = []
     for p in ["SFPD", "NCRIC", "CHP", "FBI", "DHS", "District Attorney", "City Attorney", "Third-party Vendor"]:
@@ -231,7 +238,7 @@ def heuristic_extract(short_name, agency, tech, text):
         "retention_period": retention,
         "sharing_partners": partners[:4],
         "outside_agency_access": "Permitted for law enforcement / authorized requests; downstream limits vary." if "law enforcement" in shr_q.lower() else "Vague / Unspecified",
-        "audit_cadence": "Annual COIT / Department Review" if "annual" in aud_q.lower() else "Unspecified / Periodic",
+        "audit_cadence": "No access audit stated" if "not explicitly" in aud_q.lower() else "Access logged and auditable",
         "vague_or_blank_fields": vague,
         "verbatim_quotes": {
             "retention": ret_q,
@@ -249,12 +256,14 @@ def heuristic_extract(short_name, agency, tech, text):
 
 def process_policies():
     api_key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
-    txt_files = sorted(glob.glob(os.path.join(DATA_DIR, "sf-surveillance-inventory", "*.txt")))
+    txt_files = sorted(glob.glob(os.path.join(INPUT_DIR, "sf-surveillance-inventory", "*.txt")))
     policies = []
     used_claude = False
 
     for path in txt_files:
         fname = os.path.basename(path)
+        if fname not in POLICY_META:  # e.g. the biannual inventory report is not a policy
+            continue
         short_name, agency, tech = POLICY_META.get(fname, (fname, fname, "Surveillance Tech"))
         with open(path, encoding="utf-8", errors="ignore") as f:
             text = f.read()
@@ -297,4 +306,11 @@ if __name__ == "__main__":
     metrics = {**atlas_metrics, **policy_metrics}
     with open(os.path.join(DATA_DIR, "metrics.json"), "w", encoding="utf-8") as f:
         json.dump(metrics, f, indent=2)
+    # The page loads public/data.json, so rebuild it from the same outputs to keep them in sync.
+    bundle = {"metrics": metrics}
+    for key, name in (("policies", "policies_analyzed.json"), ("bayArea", "bay_area_agencies.json")):
+        with open(os.path.join(DATA_DIR, name), encoding="utf-8") as f:
+            bundle[key] = json.load(f)
+    with open(os.path.join(ROOT, "public", "data.json"), "w", encoding="utf-8") as f:
+        json.dump(bundle, f)
     print(json.dumps(metrics, indent=2))

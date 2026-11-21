@@ -28,8 +28,8 @@
       "count": 10
     }
   ],
-  "sf_policies_count": 7,
-  "sf_policies_with_sharing_gaps": 6,
-  "sf_policies_with_audit_gaps": 0,
+  "sf_policies_count": 6,
+  "sf_policies_with_sharing_gaps": 5,
+  "sf_policies_with_audit_gaps": 5,
   "extraction_mode": "deterministic-text-fallback"
 }
