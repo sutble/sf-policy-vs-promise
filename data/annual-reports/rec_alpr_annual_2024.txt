@@ -1,0 +1,190 @@
+10/25/24, 2:00 PM                     LogicGate | Record REC Automated License Plate Reader (ALPR) Annual Surveillance Report 2024
+
+
+
+
+        REC Automated License Plate Reader (ALPR) Annual Surveillance Report 2024
+
+        Fields marked with an asterisk (*) are required.
+
+
+        Change In Authorized Use Cases
+
+
+
+          1.1 In the last year, did your department have use cases which differed from your “approved use cases” in your BOS-
+          approved policy?
+          No
+
+
+
+        Change in Authorized Job Titles
+
+
+
+          2.1 Does the list of “authorized job titles” in your BOS-approved policy need to change? (i.e. Do you need additional
+          job titles to be authorized to access the data, or do you need to remove any current job titles?)
+          Yes
+
+          2.2 Please provide an updated list of authorized job titles.
+          0922, Manager I; 0954 Deputy Director IV
+
+          2.3 Why have the job titles changed?
+          Promotions and the provision of access to additional employee classifications
+
+
+
+        Change in Number and/or Type of Technology
+
+                Replacement of Old Technology
+          4.1 Has any technology listed in the policy been replaced?
+          No
+
+
+
+                Addition of New Technology
+          5.1 Has any technology been added which is not listed in the policy?
+          No
+
+
+
+                Ceased Operation of Technology
+          6.1 Is any technology listed in the policy no longer in use?
+          No
+10/25/24, 2:00 PM                     LogicGate | Record REC Automated License Plate Reader (ALPR) Annual Surveillance Report 2024
+
+                Services or Equipment Sources
+          7.1 List any and all entities, companies or individuals which provide services or equipment to the department which
+          are essential to the functioning or effectiveness of the Surveillance Technology (list “N/A” if not applicable): *
+          Microbiz, Exacqvision
+
+
+        Surveillance Technology Goals
+
+
+
+          8.1 Has the surveillance technology been effective at achieving its identified purpose?
+          Yes
+
+          8.2 In 3-5 sentences, please explain how the technology has or has not been effective
+          Video identification provides a record of evidence that can be used to deter property crime, theft, and vandalism. In
+          doing so they promote public safety and help the department fulfill its mission to maintain beautiful parks and
+          facilities. In Fiscal Year 2024 there were 364 Police Department Incident Reports recorded at intersections adjacent to
+          the Palace of Fine Arts, where this surveillance technology is currently deployed.
+
+
+
+        Data Sharing
+
+
+
+          9.1 Has data acquired through the surveillance technology been shared with entities outside of the department?
+          No
+
+          9.3 List which departments received surveillance technology data from your department, what type of data was dis-
+          closed, under what legal standard the information was disclosed, and a justification for the disclosure.
+          N/A
+
+          9.4 Was the data shared with entities outside of city and county government?
+          No
+
+
+
+        Accidental Receipt of Face Recognition Data
+
+
+
+          10.1 Did your department inadvertently or unintentionally receive, retain, access or use any information obtained
+          from Face Recognition Technology?
+          No
+
+
+
+        Complaints
+10/25/24, 2:00 PM                   LogicGate | Record REC Automated License Plate Reader (ALPR) Annual Surveillance Report 2024
+
+
+
+
+          11.1 Has your department received any complaints and/or concerns from community members about this surveil-
+          lance technology?
+          No
+
+
+        Violations
+
+
+
+          12.1 Were there any violations of the Surveillance Technology Policy or Surveillance Impact Report, reported
+          through community members, non-privileged internal audits, or through other means in the last year?
+          No
+
+          12.4 Has your department conducted any internal audits of the technology?
+          No
+
+
+
+        Statistics and Information about Public Records Act Requests
+
+
+
+          13.1 Has your department received any public records act requests for this surveillance technology?
+          No
+
+
+
+        Total Annual Costs for the Surveillance Technology
+10/25/24, 2:00 PM                      LogicGate | Record REC Automated License Plate Reader (ALPR) Annual Surveillance Report 2024
+
+
+
+
+          14.1 List the number of FTE (new & existing).
+          .1
+
+          14.2 Are there one-time costs for Fiscal Year 2024-2025?
+          No
+
+
+
+          14.15 Are there annual costs for Fiscal Year 2024-2025:
+          Yes
+
+          14.16 Are there annual Salary and Fringe costs?
+          Yes
+
+          14.17 List total annual Salary and Fringe costs for FY 2024-2025:
+          $5,512.50
+
+          14.18 Are there annual Software costs?
+          No
+
+          14.20 Are there annual Hardware/ Equipment costs?
+          No
+
+          14.22 Are there annual Professional Services costs?
+          No
+
+          14.24 Are there annual Training costs?
+          No
+
+          14.26 Are there annual "Other" costs?
+          No
+
+          14.28 What source of funding will fund the Surveillance Technology for FY 2024-2025?
+          General Fund
+
+          14.29 Have there been any changes to the one-time costs from your department’s approved Surveillance Impact
+          Report?
+          Yes
+
+          14.30 Why have the one-time costs changed?
+          We did not purchase new equipment
+
+          14.31 Have there been any changes to the annual costs from your department’s approved Surveillance Impact
+          Report?
+          Yes
+
+          14.32 Why have the annual costs changed?
+          Adjusted staff costs to reflect increase in salary and fringe rates
+

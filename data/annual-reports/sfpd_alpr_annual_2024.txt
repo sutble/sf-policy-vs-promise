@@ -1,0 +1,493 @@
+10/31/24, 12:30 PM                     LogicGate | Record POL Automated License Plate Reader (ALPR) Annual Surveillance Report 2024
+
+
+
+
+        POL Automated License Plate Reader (ALPR) Annual Surveillance Report 2024
+
+        Fields marked with an asterisk (*) are required.
+
+
+        Change In Authorized Use Cases
+
+
+
+          1.1 In the last year, did your department have use cases which differed from your “approved use cases” in your BOS-
+          approved policy?
+          No
+
+
+
+        Change in Authorized Job Titles
+
+
+
+          2.1 Does the list of “authorized job titles” in your BOS-approved policy need to change? (i.e. Do you need additional
+          job titles to be authorized to access the data, or do you need to remove any current job titles?)
+          Yes
+
+          2.2 Please provide an updated list of authorized job titles.
+          0390 Chief of Police; 0395 Assistant Chief; 0400 Deputy Chief; 0488 Commander; Q80 Captain; Q60 Lieutenant; Q50
+          Sergeant; 0380 Inspector; Q2 Police Officer; Crime analysts in 1822-1825 classifications; Civilian directors and managers:
+          Dir. Crime Strategies; Dir of Forensic Services; Dir. of Technology; Dir. of Strategic Communications; Dir. of Constitutional
+          Policing
+
+          2.3 Why have the job titles changed?
+          The department needs to add authorized job titles so that sworn members and professional staff involved in operating
+          the system or supporting its authorized uses can access data on a need-to-know basis.
+
+
+
+        Change in Number and/or Type of Technology
+10/31/24, 12:30 PM                    LogicGate | Record POL Automated License Plate Reader (ALPR) Annual Surveillance Report 2024
+
+                Replacement of Old Technology
+          4.1 Has any technology listed in the policy been replaced?
+          Yes
+
+          4.2 Why has the technology been replaced?
+          The department has expanded the use of ALPR cameras, including adding new vendors.
+
+          4.3 Please list technology which was replaced (include manufacturer and model information).
+          Neology ALPR cameras
+
+          4.4 Please list technology which replaced the original technology (include manufacturer and model information).
+          See Section 5 – Addition of New Technology below.
+
+          4.5 Please list how many units have been replaced.
+          One
+
+
+                Addition of New Technology
+          5.1 Has any technology been added which is not listed in the policy?
+          Yes
+
+          5.2 Why has the technology been added?
+          The department has expanded the use of ALRP cameras and added additional vendors.
+
+          5.3 Please list technology which was added (include manufacturer and model information.
+          Flock ALPR, Motorla/Vigilant ALPR, ThomsonReuters Clear ALPR
+
+          5.4 Please list how many units have been added.
+          The department currently has approximately 300 ALPR cameras not including mobile. Total deployment is expected to
+          be 400.
+
+
+                Ceased Operation of Technology
+          6.1 Is any technology listed in the policy no longer in use?
+          No
+
+
+
+                Services or Equipment Sources
+          7.1 List any and all entities, companies or individuals which provide services or equipment to the department which
+          are essential to the functioning or effectiveness of the Surveillance Technology (list “N/A” if not applicable): *
+          Flock ALPR, Motorla/Vigilant ALPR, ThomsonReuters Clear ALPR
+
+
+        Surveillance Technology Goals
+10/31/24, 12:30 PM                     LogicGate | Record POL Automated License Plate Reader (ALPR) Annual Surveillance Report 2024
+
+
+
+
+          8.1 Has the surveillance technology been effective at achieving its identified purpose?
+          Yes
+
+          8.2 In 3-5 sentences, please explain how the technology has or has not been effective
+          The department’s ALRP cameras are already delivering significant results, leading to arrests for various crimes in San
+          Francisco and also helping jurisdictions locate those who commit crimes in other cities. This includes arrests for crimes
+          including organized retail theft, carjacking, robbery, and sexual assault. These arrests are helping San Francisco to
+          sustain its reductions in crime. Year to date, property crime down 33.5% and violent crime down 14% compared to last
+          year.
+
+
+        Data Sharing
+10/31/24, 12:30 PM                     LogicGate | Record POL Automated License Plate Reader (ALPR) Annual Surveillance Report 2024
+
+
+
+
+          9.1 Has data acquired through the surveillance technology been shared with entities outside of the department?
+          Yes
+
+          9.2 Was the data shared with city and county departments or other entities associated with city and county
+          government?
+          Yes
+
+          9.3 List which departments received surveillance technology data from your department, what type of data was dis-
+          closed, under what legal standard the information was disclosed, and a justification for the disclosure.
+          The department shared digital images of vehicle license plates and their associated vehicles and the date and time the
+          license plate passed a digital image site where an ALPR is located with the San Francisco District Attorney's Office for use
+          as evidence to aid in prosecution under criminal discovery Penal Code Section 1054, as required by law, as well as in
+          accordance with the CA Penal Code, department retention guidelines, and state and federal law.
+
+
+
+          9.4 Was the data shared with entities outside of city and county government?
+          Yes
+10/31/24, 12:30 PM                    LogicGate | Record POL Automated License Plate Reader (ALPR) Annual Surveillance Report 2024
+
+          9.5 List which non-city entities received surveillance technology data from your department, what type of data was
+          disclosed, under what legal standard the information was disclosed, and a justification for the disclosure.
+          Consistent with the Surveillance Technology Policy, the department shared digital images of vehicle license plates and
+          their associated vehicles and the date and time the license plate passed a digital image site where an ALPR is located
+          with the following law enforcement agencies:
+
+          Alameda County CA SO
+          Albany CA PD
+          Alhambra CA PD
+          Anaheim CA PD
+          Anderson CA PD
+          Arcadia CA PD
+          Atwater CA PD
+          Auburn CA PD
+          Bakersfield CA PD
+          Baldwin Park CA PD
+          Beaumont CA PD
+          Bell Gardens CA PD
+          Benicia CA PD
+          Beverly Hills CA PD
+          Bishop CA PD
+          Brawley CA PD
+          Brisbane CA PD
+          Buena Park CA PD
+          Burbank CA PD
+          Burlingame CA PD
+          Butte County CA SO
+          Cal Fire
+          Cal State Fullerton (CA)
+          California Department of Corrections
+          California Highway Patrol
+          California State Parks
+          California State University Long Beach Campus PD
+          Calistoga CA PD
+          Campbell CA PD
+          Capitola CA PD
+          Carlsbad CA PD
+          Carmel CA PD
+          Cathedral City CA PD
+          Central Marin CA PD
+          Cerritos College CA PD
+          Chino PD (CA)
+          Chula Vista CA PD
+          Citrus Heights CA PD
+          City of Lemoore CA
+          City of Riverside CA PD
+          Cloverdale CA PD
+          Colma CA PD
+          Concord CA PD
+          Contra Costa County CA SO
+10/31/24, 12:30 PM                    LogicGate | Record POL Automated License Plate Reader (ALPR) Annual Surveillance Report 2024
+
+          Corona CA PD
+          Coronado CA PD
+          Costa Mesa CA PD
+          Culver City CA PD
+          Daly City CA PD
+          Danville CA PD
+          Dixon CA PD
+          Downey PD CA
+          Dublin CA PD (ACSO)
+          East Palo Alto CA PD
+          El Cajon CA PD
+          El Centro CA PD
+          El Cerrito CA PD
+          El Monte CA PD
+          Emeryville CA PD
+          Escalon CA PD
+          Escondido CA PD
+          Fairfield CA PD
+          Folsom CA PD
+          Fontana CA PD
+          Foothill-DeAnza CA PD
+          Foster City CA PD
+          Fowler CA PD
+          Fremont CA PD
+          Galt CA PD
+          Garden Grove CA PD
+          Gilroy CA PD
+          Glendora (CA) PD
+          Grass Valley CA PD
+          Greenfield PD CA
+          Gustine PD CA
+          Hanford CA PD
+          Hayward CA PD
+          Healdsburg CA PD
+          Hercules CA PD
+          Imperial City CA PD
+          Imperial County CA SO
+          Indio CA PD
+          Irvine CA PD
+          Irwindale CA PD
+          Kern County CA SO
+          Kings County CA DAs Office
+          Kings County Sheriff's Office CA
+          La Habra CA PD
+          La Verne CA PD
+          Lakeport CA PD
+          Lathrop CA PD
+          Lincoln CA PD
+          Livermore CA PD
+          Livingston CA PD
+10/31/24, 12:30 PM                     LogicGate | Record POL Automated License Plate Reader (ALPR) Annual Surveillance Report 2024
+
+          Lodi CA PD
+          Lompoc CA PD
+          Los Alamitos PD CA
+          Los Altos CA PD
+          Los Angeles CA PD
+          Los Angeles County CA SD
+          Los Angeles Port Police CA
+          Los Gatos Monte Sereno PD - CA
+          Madera County SO CA
+          Manteca CA PD
+          Marin County CA DA
+          Marin County CA SO
+          Marina CA PD
+          Mendocino County SO-CA
+          Mendota CA PD
+          Menifee CA PD
+          Merced County CA SO
+          Modoc County CA SO
+          Montclair CA PD
+          Monterey County CA SO
+          Morgan Hill CA PD
+          Mountain View CA PD (Santa Clara County)
+          Murrieta CA PD
+          Napa CA PD
+          Napa County CA SO
+          National City CA PD
+          NCRIC
+          Nevada County CA SO
+          Newark CA PD
+          Newport Beach PD CA
+          Novato CA PD
+          Oakland CA PD
+          Oakley CA PD
+          OC Sheriff CA
+          Ontario CA PD
+          Orange CA PD
+          Orange Cove CA PD
+          Oroville CA PD
+          Oxnard CA PD
+          Palm Springs CA PD
+          Palo Alto CA PD
+          Pasadena CA PD
+          Petaluma CA PD
+          Placer County CA DA Office
+          Pleasant Hill CA PD
+          Pleasanton CA PD
+          Pomona CA PD
+          Port of Los Angeles CA PD
+          Port of Stockton CA PD
+          Porterville CA PD
+10/31/24, 12:30 PM                    LogicGate | Record POL Automated License Plate Reader (ALPR) Annual Surveillance Report 2024
+
+          RCATF CA PD
+          Redondo Beach CA PD
+          Redwood City CA PD
+          Ridgecrest CA PD
+          Rio Vista CA PD
+          Riverside County CA District Attorney
+          Rocklin CA PD
+          Rohnert Park Department of Public Safety (CA)
+          Sacramento CA DA
+          Sacramento County CA SO
+          San Bernardino CA PD
+          San Bernardino County CA SO
+          San Bruno CA PD
+          San Diego CA PD
+          San Fernando CA PD
+          San Francisco District Attorney CA
+          San Joaquin County CA SO
+          San Joaquin Delta College PD
+          San Jose CA PD
+          San Leandro CA PD
+          San Luis Obispo CA PD
+          San Luis Obispo County (CA) Sheriff
+          San Mateo CA PD
+          San Mateo County CA SO
+          San Pablo CA PD
+          San Rafael CA PD
+          Sand City CA PD
+          Santa Barbara County CA SO
+          Santa Clara CA PD
+          Santa Clara County CA SO
+          Santa Clara DA CA
+          Santa Cruz CA PD
+          Santa Monica CA PD
+          Santa Rosa CA PD
+          Sausalito CA PD
+          Seal Beach CA PD
+          Seaside CA PD
+          Sequoias Community College District CA PD
+          Shafter PD CA
+          Soledad CA PD
+          Sonoma County CA SO
+          South Gate CA PD
+          South Pasadena CA PD
+          South San Francisco CA PD
+          Stockton CA PD
+          Suisun City CA PD
+          Sunnyvale CA PD
+          Sutter County CA SO
+          Tehachapi CA PD
+          Tracy CA PD
+10/31/24, 12:30 PM                    LogicGate | Record POL Automated License Plate Reader (ALPR) Annual Surveillance Report 2024
+
+          Tulare County CA SO
+          Tustin CA PD
+          Union City CA PD
+          Upland CA PD
+          Vacaville CA PD
+          Vallejo CA PD
+          Ventura CA PD
+          Ventura County CA SO
+          Ventura County District Attorney's Office CA
+          Visalia CA PD
+          West Covina CA PD
+          West Sacramento CA PD
+          Whittier CA PD
+          Williams CA PD
+          Woodlake CA PD
+          Yreka CA PD
+          Yuba City CA PD
+
+
+
+
+        Accidental Receipt of Face Recognition Data
+
+
+
+          10.1 Did your department inadvertently or unintentionally receive, retain, access or use any information obtained
+          from Face Recognition Technology?
+          No
+
+
+
+        Complaints
+
+
+
+          11.1 Has your department received any complaints and/or concerns from community members about this surveil-
+          lance technology?
+          No
+
+
+
+        Violations
+
+
+
+          12.1 Were there any violations of the Surveillance Technology Policy or Surveillance Impact Report, reported
+          through community members, non-privileged internal audits, or through other means in the last year?
+          No
+
+          12.4 Has your department conducted any internal audits of the technology?
+          No
+
+
+
+        Statistics and Information about Public Records Act Requests
+10/31/24, 12:30 PM                    LogicGate | Record POL Automated License Plate Reader (ALPR) Annual Surveillance Report 2024
+
+
+
+
+          13.1 Has your department received any public records act requests for this surveillance technology?
+          Yes
+
+          13.2 How many public records requests have been made regarding this surveillance technology?
+          Seven
+
+          13.3 Please summarize what has been requested via public records requests, including the general type of informa-
+          tion requested and disclosed, as well as the number or requests for each general type of information.
+          Of the seven overall requests, five requested the proposed or finalized placement of fixed or semi-fixed ALPR cameras in
+          San Francisco, one requested the contract for fixed location ALPR cameras, one requested all images captured by and
+          stored by SFPD or its contractors for the ALPR camera at the intersection of Monterey Blvd. and Circular Ave., and one
+          requested any test images captured by and stored by SFPD or its contractors for the ALPR camera at the intersection of
+          Monterey Blvd. and Circular Ave. The department has asserted all privileges available by law to maintain confidentiality
+          as to the compiled ALPR map depicting the location of all installed ALPR cameras. The map is a record of security and
+          intelligence information that is protected under Cal. Govt. Code section 7923.600(a). The department has disclosed a
+          presentation which addresses what ALPR cameras are, how cameras will be funded, how cameras will be utilized, data
+          driven camera placement, coordination with other agencies that already have ALPR cameras and balancing public
+          safety and privacy. The department also disclosed Department Notice 24-052: “Automated License Plate Reader (ALPR)
+          Technology: Flock Safety Camera Rollout” which addresses the grant award, and ALPR Rollout and Training & Access.
+          Finally, the department disclosed the SFPD ALPR Policy (BOS approved 12/12/2023 Signed by Mayor 12/19/2023). This
+          document addresses the purpose and scope of the ALPR policy, a general policy statement, business justification, policy
+          requirements, compliance, definitions, authorization and questions and concerns.
+
+
+        Total Annual Costs for the Surveillance Technology
+10/31/24, 12:30 PM                       LogicGate | Record POL Automated License Plate Reader (ALPR) Annual Surveillance Report 2024
+
+
+
+
+          14.1 List the number of FTE (new & existing).
+          N/A. ALRP cameras are used during the normal course of business for Police Officers, Inspectors, Sergeants, Crime
+          Analysts, Lieutenants of Special Investigations Division (or their designee), Deputy Chief of Investigations, Assistant
+          Chiefs and Chief of Police .
+
+          14.2 Are there one-time costs for Fiscal Year 2024-2025?
+          Yes
+
+          14.3 Are there one-time Salary and Fringe costs?
+          No
+
+          14.5 Are there one-time Software costs?
+          No
+
+          14.7 Are there one-time Hardware/ Equipment costs?
+          Yes
+
+          14.8 List total one-time Hardware/ Equipment costs for FY 2024-2025.
+          $350,000 one-time installation cost
+
+          14.9 Are there one-time Professional Services costs?
+          No
+
+          14.11 Are there one-time Training costs?
+          No
+
+          14.13 Are there one-time "Other" costs?
+          No
+
+          14.15 Are there annual costs for Fiscal Year 2024-2025:
+          Yes
+
+          14.16 Are there annual Salary and Fringe costs?
+          No
+
+          14.18 Are there annual Software costs?
+          Yes
+
+          14.19 List total annual Software costs for FY 2024-2025:
+          $1.2 million in annual recurring costs
+
+          14.20 Are there annual Hardware/ Equipment costs?
+          No
+
+          14.22 Are there annual Professional Services costs?
+          No
+10/31/24, 12:30 PM                     LogicGate | Record POL Automated License Plate Reader (ALPR) Annual Surveillance Report 2024
+
+          14.24 Are there annual Training costs?
+          No
+
+          14.26 Are there annual "Other" costs?
+          No
+
+          14.28 What source of funding will fund the Surveillance Technology for FY 2024-2025?
+          Funded entirely through State of California retail theft grant.
+
+          14.29 Have there been any changes to the one-time costs from your department’s approved Surveillance Impact
+          Report?
+          No
+
+          14.31 Have there been any changes to the annual costs from your department’s approved Surveillance Impact
+          Report?
+          No
+

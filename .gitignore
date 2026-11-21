@@ -5,3 +5,4 @@ __pycache__/
 .env
 *.pyc
 _publish/
+!data/annual-reports/

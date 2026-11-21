@@ -1,0 +1,235 @@
+10/29/24, 4:37 PM                                                        LogicGate | Record
+
+
+
+
+       AIR Automated License Plate Reader (ALPR) Annual Surveillance Report 2024
+
+       Fields marked with an asterisk (*) are required.
+
+
+       Change In Authorized Use Cases
+
+
+
+          1.1 In the last year, did your department have use cases which differed from your “approved use cases” in your BOS-
+          approved policy?
+          No
+
+
+
+       Change in Authorized Job Titles
+
+
+
+          2.1 Does the list of “authorized job titles” in your BOS-approved policy need to change? (i.e. Do you need additional
+          job titles to be authorized to access the data, or do you need to remove any current job titles?)
+          No
+
+
+
+       Change in Number and/or Type of Technology
+
+               Replacement of Old Technology
+          4.1 Has any technology listed in the policy been replaced?
+          No
+
+
+
+               Addition of New Technology
+          5.1 Has any technology been added which is not listed in the policy?
+          No
+
+
+
+               Ceased Operation of Technology
+          6.1 Is any technology listed in the policy no longer in use?
+          No
+
+
+
+               Services or Equipment Sources
+          7.1 List any and all entities, companies or individuals which provide services or equipment to the department which
+          are essential to the functioning or effectiveness of the Surveillance Technology (list “N/A” if not applicable): *
+          SFO Landside Operations; SFO GTU Ground Transportation Unit; Contractors - Arcadis.
+10/29/24, 4:37 PM                                                         LogicGate | Record
+
+
+       Surveillance Technology Goals
+
+
+
+          8.1 Has the surveillance technology been eﬀective at achieving its identified purpose?
+          Yes
+
+          8.2 In 3-5 sentences, please explain how the technology has or has not been eﬀective
+          The ALPR – GTMS has been eﬀective as a fail-safe should the Automated Vehicle Identification (AVI) readers
+          malfunction and fail to read the transponder which the Airport aﬀixes to certain types of permitted vehicles. The
+          technology assists in dispute resolution in the event that the operator challenges the transponder data (i.e., number
+          of trips the operator has made to the Airport) collected from the AVI.
+
+          The technology is also eﬀective in tracking permitted operators that are not issued transponders, such as TNC
+          vehicles and long-distance bus carriers; tracking unpermitted operators who solicit passengers for rides; and
+          assisting public safety agencies in investigations. For FY 23-24, there were 33,895 Administrative Citations issued to
+          TNC's and 1,663 for other Ground Transportation modes.
+
+
+          The technology enables the Airport to assess trip fees on permitted Commercial ground transportation operators.
+          Specifically, as June 2024, the Airport collected a total of $ 22,140,000 in trip fees from ground transportation
+          operators.
+
+
+
+       Data Sharing
+
+
+
+          9.1 Has data acquired through the surveillance technology been shared with entities outside of the department?
+          Yes
+
+          9.2 Was the data shared with city and county departments or other entities associated with city and county
+          government?
+          Yes
+
+          9.3 List which departments received surveillance technology data from your department, what type of data was dis-
+          closed, under what legal standard the information was disclosed, and a justification for the disclosure.
+          The S.F. Police Department - Airport Bureau (SFPD-AB) and the San Mateo County Sherriff's Dept. receive surveillance
+          technology data from the Airport. Specifically, the data includes: License Plate number, image of car, and list of time &
+          location of when the vehicle was on Airport property. Vehicles that did not have a permit to operate at the Airport are
+          cited as being in violation of the contractual requirements of the Airport.
+
+          9.4 Was the data shared with entities outside of city and county government?
+          Yes
+
+          9.5 List which non-city entities received surveillance technology data from your department, what type of data was
+          disclosed, under what legal standard the information was disclosed, and a justification for the disclosure.
+          The California Public Utilities Commission (CPUC) receives surveillance technology data from the Airport. Specifically,
+          the data includes: License Plate number, image of car, and list of time & location of when the vehicle was on Airport
+          property. Vehicles that did not have a permit to operate at the Airport are reported as being in violation of the
+          contractual requirements of the Airport.
+10/29/24, 4:37 PM                                                      LogicGate | Record
+
+
+       Accidental Receipt of Face Recognition Data
+
+
+
+          10.1 Did your department inadvertently or unintentionally receive, retain, access or use any information obtained
+          from Face Recognition Technology?
+          No
+
+
+
+       Complaints
+
+
+
+          11.1 Has your department received any complaints and/or concerns from community members about this surveil-
+          lance technology?
+          No
+
+
+
+       Violations
+
+
+
+          12.1 Were there any violations of the Surveillance Technology Policy or Surveillance Impact Report, reported
+          through community members, non-privileged internal audits, or through other means in the last year?
+          No
+
+          12.4 Has your department conducted any internal audits of the technology?
+          No
+
+
+
+       Statistics and Information about Public Records Act Requests
+
+
+
+          13.1 Has your department received any public records act requests for this surveillance technology?
+          No
+
+
+
+       Total Annual Costs for the Surveillance Technology
+10/29/24, 4:37 PM                                                       LogicGate | Record
+
+
+
+
+          14.1 List the number of FTE (new & existing).
+          SFO: TechShop Existing (.10 of FTE)
+
+          14.2 Are there one-time costs for Fiscal Year 2024-2025?
+          Yes
+
+          14.3 Are there one-time Salary and Fringe costs?
+          No
+
+          14.5 Are there one-time Software costs?
+          Yes
+
+          14.6 List total one-time Software costs for FY 2024-2025.
+          $188,100 = One-time Maintenance costs for Software & Hardware
+
+          14.7 Are there one-time Hardware/ Equipment costs?
+          Yes
+
+          14.8 List total one-time Hardware/ Equipment costs for FY 2024-2025.
+          See 14.6 Note Above.
+
+          14.9 Are there one-time Professional Services costs?
+          No
+
+          14.11 Are there one-time Training costs?
+          No
+
+          14.13 Are there one-time "Other" costs?
+          No
+
+          14.15 Are there annual costs for Fiscal Year 2024-2025:
+          Yes
+
+          14.16 Are there annual Salary and Fringe costs?
+          Yes
+
+          14.17 List total annual Salary and Fringe costs for FY 2024-2025:
+          $21,000
+
+          14.18 Are there annual Software costs?
+          Yes
+
+          14.19 List total annual Software costs for FY 2024-2025:
+          $340,000 = Total Annual Cost of Software & Hardware Support
+
+          14.20 Are there annual Hardware/ Equipment costs?
+          Yes
+10/29/24, 4:37 PM                                                     LogicGate | Record
+
+          14.21 List total annual Hardware/ Equipment costs for FY 2024-2025:
+          See 14.19 Note Above.
+
+          14.22 Are there annual Professional Services costs?
+          No
+
+          14.24 Are there annual Training costs?
+          No
+
+          14.26 Are there annual "Other" costs?
+          No
+
+          14.28 What source of funding will fund the Surveillance Technology for FY 2024-2025?
+          Operating Expense
+
+          14.29 Have there been any changes to the one-time costs from your department’s approved Surveillance Impact
+          Report?
+          Yes
+
+          14.30 Why have the one-time costs changed?
+          Maintenance and improvements (e.g., replacing &/or updating software & hardware)
+
+          14.31 Have there been any changes to the annual costs from your department’s approved Surveillance Impact
+          Report?
+          No
+

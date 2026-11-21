@@ -101,6 +101,66 @@ SOURCE_URLS = {
     "rec_alpr_stp": "https://www.sf.gov/sites/default/files/2022-03/REC_Surveillance%20Technology%20Ordinance_ALPR_Policy_COIT.pdf",
 }
 
+# ---- Practice layer: what each department told the city it actually did in 2024 ----
+# Source: each department's ALPR Annual Surveillance Report 2024 (filed Oct 2024), in data/annual-reports/.
+REPORTS = Path(ROOT / "data" / "annual-reports")
+PRACTICE_SOURCES = {
+    "SFPD": ("sfpd_alpr_annual_2024", "https://api.sf.gov/documents/33376/POL_Automated_License_Plate_Reader_ALPR_Annual_Surveillance_Report_2024.pdf"),
+    "Airport": ("airport_alpr_annual_2024", "https://sf.gov/sites/default/files/2024-10/AIR%20ALPR%20Annual%20Surveillance%20Report%202024.pdf"),
+    "SFMTA": ("sfmta_alpr_annual_2024", "https://sf.gov/sites/default/files/2024-10/MTA%20Automated%20License%20Plate%20Reader%20%28ALPR%29%20Annual%20Surveillance%20Report%202024.pdf"),
+    "Public Works": ("pw_alpr_annual_2024", "https://sf.gov/sites/default/files/2024-10/DPW%20Automated%20License%20Plate%20Reader%20%28ALPR%29%20Annual%20Surveillance%20Report%202024.pdf"),
+    "Rec & Park": ("rec_alpr_annual_2024", "https://sf.gov/sites/default/files/2024-10/REC%20Automated%20License%20Plate%20Reader%20%28ALPR%29%20Annual%20Surveillance%20Report%202024.pdf"),
+}
+
+PRACTICE_COLUMNS = [
+    ("shared", "Shared outside the department", "Did plate data go to anyone outside the department in 2024?"),
+    ("audit", "Internal audit in 2024", "Did the department check its own use of the system?"),
+    ("violations", "Violations found", "Did the department report any broken rules?"),
+    ("works", "Says it worked", "Did the department say the cameras did their job?"),
+]
+
+Q_SHARED_NO = "Has data acquired through the surveillance technology been shared with entities outside of the department? No"
+Q_AUDIT_NO = "Has your department conducted any internal audits of the technology? No"
+Q_VIOL_NO = ("Were there any violations of the Surveillance Technology Policy or Surveillance Impact Report, reported through "
+             "community members, non-privileged internal audits, or through other means in the last year? No")
+VIOL_UNCHECKED = "None reported, but no internal audit was done to find any"
+
+PRACTICE = {
+    "SFPD": {
+        "shared": ("vague", "Yes: the District Attorney plus about 200 law enforcement agencies across California",
+                   "the department shared digital images of vehicle license plates and their associated vehicles and the date and time the license plate passed a digital image site where an ALPR is located with the following law enforcement agencies"),
+        "audit": ("missing", "No internal audit", Q_AUDIT_NO),
+        "violations": ("vague", VIOL_UNCHECKED, Q_VIOL_NO),
+        "works": ("ok", "Yes: credits the cameras with arrests", "The department’s ALRP cameras are already delivering significant results"),
+    },
+    "Airport": {
+        "shared": ("vague", "Yes: SFPD Airport Bureau, San Mateo County Sheriff, and the state utilities regulator (CPUC). The policy names neither of the last two.",
+                   "The California Public Utilities Commission (CPUC) receives surveillance technology data from the Airport."),
+        "audit": ("missing", "No internal audit", Q_AUDIT_NO),
+        "violations": ("vague", VIOL_UNCHECKED, Q_VIOL_NO),
+        "works": ("ok", "Yes", "Has the surveillance technology been eﬀective at achieving its identified purpose? Yes"),
+    },
+    "SFMTA": {
+        "shared": ("ok", "No", Q_SHARED_NO),
+        "audit": ("ok", "Yes, internal audits done", "Has your department conducted any internal audits of the technology? Yes"),
+        "violations": ("ok", "None, after an internal audit", "No violations of data were found as a result of our department's internal audits."),
+        "works": ("ok", "Yes", "Has the surveillance technology been effective at achieving its identified purpose? Yes"),
+    },
+    "Public Works": {
+        "shared": ("ok", "No", Q_SHARED_NO),
+        "audit": ("missing", "No internal audit", Q_AUDIT_NO),
+        "violations": ("vague", VIOL_UNCHECKED, Q_VIOL_NO),
+        "works": ("vague", "Can't say yet: the first cameras went up on October 29, 2024",
+                  "Public Works cannot make a determination regarding the success of this program or not, since we have been delayed in the implementation of cameras outlined in this policy"),
+    },
+    "Rec & Park": {
+        "shared": ("ok", "No", Q_SHARED_NO),
+        "audit": ("missing", "No internal audit", Q_AUDIT_NO),
+        "violations": ("vague", VIOL_UNCHECKED, Q_VIOL_NO),
+        "works": ("ok", "Yes", "Has the surveillance technology been effective at achieving its identified purpose? Yes"),
+    },
+}
+
 MISSING_SEARCH = {
     "federal": "searched for “federal agenc”, “out-of-state”",
     "statelaw": "searched for “1798.90”",
@@ -123,8 +183,8 @@ def norm(s):
     return re.sub(r"\s+", " ", s).strip()
 
 
-def pages_of(stem, kind):
-    raw = (DATA / f"{stem}.txt").read_text(errors="replace")
+def pages_of(stem, kind, folder=DATA):
+    raw = (folder / f"{stem}.txt").read_text(errors="replace")
     return [norm(p) for p in raw.split("\f")] if kind == "pdf" else [norm(raw)]
 
 
@@ -163,11 +223,26 @@ def main():
                           "where": where, "searched": MISSING_SEARCH.get(key) if level == "missing" else None})
         rows.append({"short": short, "full": full, "file": SOURCE_URLS[stem], "fname": f"{stem}.{kind}", "cells": cells})
 
+    prows = []
+    for short, full, _, _ in POLICIES:
+        stem, url = PRACTICE_SOURCES[short]
+        pages = pages_of(stem, "pdf", REPORTS)
+        cells = []
+        for key, _, _ in PRACTICE_COLUMNS:
+            level, summary, quote = PRACTICE[short][key]
+            checked += 1
+            where = locate(pages, quote)
+            if where is None:
+                failures.append(f"practice {short}/{key}: {quote[:70]}")
+            cells.append({"key": key, "level": level, "summary": summary, "quote": quote, "where": where, "searched": None})
+        prows.append({"short": short, "full": full, "file": url, "fname": f"{stem}.pdf", "cells": cells})
+
     if failures:
         print("QUOTE CHECK FAILED, not publishing:\n  " + "\n  ".join(failures)); sys.exit(1)
 
     n = len(rows)
     count = lambda key, lvl: sum(1 for r in rows for c in r["cells"] if c["key"] == key and c["level"] == lvl)
+    pcount = lambda key, lvl: sum(1 for r in prows for c in r["cells"] if c["key"] == key and c["level"] == lvl)
     metrics = {
         "policies": n,
         "concrete_retention": count("retention", "ok"),
@@ -177,11 +252,14 @@ def main():
         "quotes_verified": checked,
         "no_policy_total": sum(len(v) for v in NO_POLICY.values()),
         "no_policy_sfpd": len(NO_POLICY["Police Department"]),
+        "audited_2024": pcount("audit", "ok"),
+        "unchecked_no_violations": pcount("violations", "vague"),
     }
     for k, v in metrics.items():
-        print(f"{k:20s} {v}")
+        print(f"{k:24s} {v}")
 
-    body = TEMPLATE.replace("__DATA__", json.dumps({"columns": COLUMNS, "rows": rows, "metrics": metrics, "noPolicy": NO_POLICY}))
+    body = TEMPLATE.replace("__DATA__", json.dumps({"columns": COLUMNS, "rows": rows, "pcolumns": PRACTICE_COLUMNS,
+                                                     "prows": prows, "metrics": metrics, "noPolicy": NO_POLICY}))
     (ROOT / "heatmap.html").write_text('<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">\n' + body + "\n</html>")
     pub = ROOT / "_publish"; pub.mkdir(exist_ok=True)
     (pub / "policy-vs-promise.html").write_text(body)
@@ -209,9 +287,9 @@ td.dept{font-weight:600;white-space:nowrap}td.dept a{color:var(--muted);font-wei
 .ok{background:var(--okbg)}.ok .tag{color:var(--ok)}.vague{background:var(--vaguebg)}.vague .tag{color:var(--vague)}.missing{background:var(--missbg)}.missing .tag{color:var(--miss)}
 .tag{font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.04em;display:block}
 .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin:10px 0}.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px;vertical-align:-1px}
-#drawer{position:sticky;bottom:0;margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 16px;min-height:90px}
-#drawer blockquote{margin:8px 0;padding-left:12px;border-left:3px solid var(--line);font-family:Georgia,serif;font-size:15px}
-#drawer .meta{color:var(--muted);font-size:13px}
+.drawer{margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 16px;min-height:90px}
+.drawer blockquote{margin:8px 0;padding-left:12px;border-left:3px solid var(--line);font-family:Georgia,serif;font-size:15px}
+.drawer .meta{color:var(--muted);font-size:13px}
 .nopol{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:6px}.nopol div{background:var(--missbg);border-radius:6px;padding:6px 9px;font-size:13px}
 .foot{color:var(--muted);font-size:13px;margin-top:30px;max-width:820px}
 </style><main>
@@ -221,11 +299,17 @@ td.dept{font-weight:600;white-space:nowrap}td.dept a{color:var(--muted);font-wei
 <div class="stats" id="stats"></div>
 <div class="legend"><span><i style="background:var(--okbg)"></i>Concrete</span><span><i style="background:var(--vaguebg)"></i>Vague / open-ended</span><span><i style="background:var(--missbg)"></i>Missing or not purpose-based</span></div>
 <div class="wrap"><table id="t"></table></div>
-<div id="drawer" aria-live="polite"><span class="meta">Click a cell to see its source quote.</span></div>
+<div class="drawer" id="drawer" aria-live="polite"><span class="meta">Click a cell to see its source quote.</span></div>
+<h2>Practice: what each department told the city about 2024</h2>
+<p class="sub">Every department files a yearly surveillance report with the city. These are their own answers for 2024, in their own words. Click any cell to see the exact answer.</p>
+<div class="stats" id="pstats"></div>
+<div class="legend"><span><i style="background:var(--okbg)"></i>Matches the promise</span><span><i style="background:var(--vaguebg)"></i>Worth a question</span><span><i style="background:var(--missbg)"></i>Gap</span></div>
+<div class="wrap"><table id="p"></table></div>
+<div class="drawer" id="pdrawer" aria-live="polite"><span class="meta">Click a cell to see the department's own answer.</span></div>
 <h2 id="np"></h2>
 <p class="sub">From the city's own Biannual Surveillance Technology Inventory Report (COIT, Sept 1 2026, Appendix D). The city counts 28 technologies from nine departments; the list has 23 entries because public Wi-Fi is shared by 8 departments. The city notes all were in use before the 2019 ordinance.</p>
 <div class="nopol" id="nopol"></div>
-<p class="foot"><b>Limits.</b> This compares what policies <i>promise</i>, not what departments <i>do</i>: we have no access or sharing logs. &ldquo;Missing&rdquo; means a keyword search of the extracted text found nothing; a rule may exist elsewhere (state law applies whether or not a policy repeats it). Whether a justification is &ldquo;purpose-based&rdquo; is our team's judgment, shown with the quote so you can disagree. SFPD row uses the amended policy. Cells were filled by reading the text; every quote is machine-checked to appear verbatim in the source.</p>
+<p class="foot"><b>Limits.</b> The practice table is each department's own answers on its 2024 yearly report, not an independent check: we have no access or sharing logs. &ldquo;About 200 agencies&rdquo; is our count of SFPD's listed recipients. &ldquo;Missing&rdquo; means a keyword search of the extracted text found nothing; a rule may exist elsewhere (state law applies whether or not a policy repeats it). Whether a justification is &ldquo;purpose-based&rdquo; is our team's judgment, shown with the quote so you can disagree. SFPD row uses the amended policy. Cells were filled by reading the text; every quote is machine-checked to appear verbatim in the source.</p>
 </main>
 <script>
 const D=__DATA__,M=D.metrics,esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -237,16 +321,24 @@ document.getElementById('stats').innerHTML=[
  ['28','technologies in use with no policy, per the city ('+M.no_policy_sfpd+' are SFPD)'],
  [M.quotes_verified+'/'+M.quotes_verified,'quotes verified verbatim against source']
 ].map(([b,s])=>`<div class="stat"><b>${b}</b><span>${s}</span></div>`).join('');
-const t=document.getElementById('t');
-t.innerHTML='<tr><th>Department</th>'+D.columns.map(c=>`<th>${esc(c[1])}<small>${esc(c[2])}</small></th>`).join('')+'</tr>'+
- D.rows.map((r,ri)=>`<tr><td class="dept">${esc(r.short)}<a href="${esc(r.file)}" target="_blank" rel="noopener">source</a></td>`+
- r.cells.map((c,ci)=>`<td><button class="cell ${c.level}" data-r="${ri}" data-c="${ci}"><span class="tag">${c.level==='ok'?'concrete':c.level}</span>${esc(c.summary)}</button></td>`).join('')+'</tr>').join('');
-const dr=document.getElementById('drawer');
-t.addEventListener('click',e=>{const b=e.target.closest('.cell');if(!b)return;
- document.querySelectorAll('.cell.sel').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');
- const r=D.rows[b.dataset.r],c=r.cells[b.dataset.c],col=D.columns[b.dataset.c];
- dr.innerHTML=`<b>${esc(r.full)}</b> &middot; ${esc(col[1])}<br>`+(c.quote?`<blockquote>&ldquo;${esc(c.quote)}&rdquo;</blockquote><span class="meta">${esc(c.where)} of <a href="${esc(r.file)}" target="_blank" rel="noopener">${esc(r.fname)}</a></span>`:
- `<p>${esc(c.summary)}.</p><span class="meta">No quote: ${esc(c.searched||'not found')} in <a href="${esc(r.file)}" target="_blank" rel="noopener">${esc(r.fname)}</a>.</span>`);});
+document.getElementById('pstats').innerHTML=[
+ [M.audited_2024+'/'+M.policies,'checked their own use with an internal audit'],
+ ['~200','outside agencies received SFPD plate data in 2024'],
+ [M.unchecked_no_violations+'/'+M.policies,'reported zero violations without auditing'],
+].map(([b,s])=>`<div class="stat"><b>${b}</b><span>${s}</span></div>`).join('');
+function grid(id,drawerId,columns,rows,tags){
+ const t=document.getElementById(id),dr=document.getElementById(drawerId);
+ t.innerHTML='<tr><th>Department</th>'+columns.map(c=>`<th>${esc(c[1])}<small>${esc(c[2])}</small></th>`).join('')+'</tr>'+
+  rows.map((r,ri)=>`<tr><td class="dept">${esc(r.short)}<a href="${esc(r.file)}" target="_blank" rel="noopener">source</a></td>`+
+  r.cells.map((c,ci)=>`<td><button class="cell ${c.level}" data-r="${ri}" data-c="${ci}"><span class="tag">${tags[c.level]}</span>${esc(c.summary)}</button></td>`).join('')+'</tr>').join('');
+ t.addEventListener('click',e=>{const b=e.target.closest('.cell');if(!b)return;
+  document.querySelectorAll('.cell.sel').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');
+  const r=rows[b.dataset.r],c=r.cells[b.dataset.c],col=columns[b.dataset.c];
+  dr.innerHTML=`<b>${esc(r.full)}</b> &middot; ${esc(col[1])}<br>`+(c.quote?`<blockquote>&ldquo;${esc(c.quote)}&rdquo;</blockquote><span class="meta">${esc(c.where)} of <a href="${esc(r.file)}" target="_blank" rel="noopener">${esc(r.fname)}</a></span>`:
+  `<p>${esc(c.summary)}.</p><span class="meta">No quote: ${esc(c.searched||'not found')} in <a href="${esc(r.file)}" target="_blank" rel="noopener">${esc(r.fname)}</a>.</span>`);});
+}
+grid('t','drawer',D.columns,D.rows,{ok:'concrete',vague:'vague',missing:'missing'});
+grid('p','pdrawer',D.pcolumns,D.prows,{ok:'matches',vague:'question',missing:'gap'});
 document.getElementById('np').textContent='28 surveillance technologies in use with no approved policy';
 document.getElementById('nopol').innerHTML=Object.entries(D.noPolicy).flatMap(([d,ts])=>ts.map(x=>`<div><b>${esc(x)}</b><br><span style="opacity:.75">${esc(d)}</span></div>`)).join('');
 </script>"""
